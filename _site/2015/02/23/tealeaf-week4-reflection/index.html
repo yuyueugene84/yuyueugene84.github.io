@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="70% American, 30% Taiwanese, Eat, Code, Play, Fuck">
+
+    <title>Tealeaf Academy Week4 Reflection - Overlord's Blog</title>
+
+    <link rel="canonical" href="http://yuyueugene84.github.io/2015/02/23/tealeaf-week4-reflection/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/clean-blog.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Overlord's Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                <li>
+                    <a href="/about/">About Me</a>
+                </li>
+                
+                <li>
+                    <a href="/contact/">Contact</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/tealeaf2.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Tealeaf Academy Week4 Reflection</h1>
+                    
+                    <h2 class="subheading"></h2>
+                    
+                    <span class="meta">Posted by Overlord on February 23, 2015</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<h2 id="overview"><strong>Overview</strong></h2>
+<p>This is the last week of Tealeaf course two. Most of the materials this week is about taking thePostit project we built in week 3 and add some finishing touch to it. The topics include some intermediate level techniques such as slugs, Admin role, and time zone. It took me an extra two weeks to finish due to a nasty flu that kept me in bed for a week, plus a trip to Hong Kong that kept me away from my computer for a few days.</p>
+
+<p>My final Postit app is up and running at: </p>
+
+<p>https://postit-eugene-chang.herokuapp.com/</p>
+
+<p>The last assignment of the course is about creating my own rails application in 3 to 4 days, the process was both fun and struggling, luckily, I completed all the functions I want in time. </p>
+
+<p>My final project is up and running at:</p>
+
+<p><a href="https://duck-on-rails.herokuapp.com">https://duck-on-rails.herokuapp.com/ </a></p>
+
+<p>I’ll make a blogpost about the my struggle during implemenation and the technical highlights of this app later.</p>
+
+<h2 id="ajax-and-rails"><strong>Ajax and Rails</strong></h2>
+<p>A quick review about Ajax: Ajax is short for Asynchronous JavaScript + XML. From the programmer’s point of view, Ajax allows programmers update part of the webpage’s content/data without having to refresh the entire page. Which is great for enhancing user experience and reducing computational cost.
+This week’s materal is about rails-flavored Ajax, which is about making Ajax request in by using rails helper instead of jquery and other methods.</p>
+
+<p>First, we add <code>remote: true</code> to the linker helper method :</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">1</span> <span class="err">&lt;</span>%= link_to vote_post_comment_path(comment.post, comment, vote: true), method: &#39;post&#39;, remote: true do %&gt;</code></pre></div>
+
+<p>The <code>remote: true</code> will add <code>data-remote="true"</code> into the html tag. Now when I click on the link generated, rails will send the following request:</p>
+
+<p><code>shell
+Started POST "/posts/9th-post/vote?vote=true" for 127.0.0.1 at 2015-03-05 11:17:59 +0800
+Processing by PostsController#vote as JS
+</code>
+Notice the <code>Processing by PostsController#vote as JS</code>, which means that this is a <strong>javascript request</strong>, and we need to handle this javascript request in the respective action of our controller. To handle different formats of response, we can add:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno"> 1</span> <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
+<span class="lineno"> 2</span>   <span class="nb">format</span><span class="o">.</span><span class="n">html</span> <span class="k">do</span>
+<span class="lineno"> 3</span>     <span class="k">if</span> <span class="vi">@vote</span><span class="o">.</span><span class="n">valid?</span>
+<span class="lineno"> 4</span>       <span class="n">flash</span><span class="o">[</span><span class="ss">:notice</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;Your vote was counted.&#39;</span>
+<span class="lineno"> 5</span>     <span class="k">else</span>
+<span class="lineno"> 6</span>       <span class="n">flash</span><span class="o">[</span><span class="ss">:error</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;You can only vote on a post once.&#39;</span>
+<span class="lineno"> 7</span>     <span class="k">end</span>
+<span class="lineno"> 8</span>     <span class="n">redirect_to</span> <span class="ss">:back</span>
+<span class="lineno"> 9</span>   <span class="k">end</span>
+<span class="lineno">10</span>   <span class="nb">format</span><span class="o">.</span><span class="n">js</span>
+<span class="lineno">11</span> <span class="k">end</span></code></pre></div>
+
+<p>Notice that if we leave format.js blank as it is shown in the above code, by default rails will render a template with the same name as the action, so in our case it will render a template callled <code>vote</code> in our post controller, but it’s not an html template, it’s a javascript template, so we need to create a new file named: <code>vote.js.erb</code> under <strong>views/posts/</strong></p>
+
+<p>erb vote.js.erb</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="o">&lt;</span><span class="sx">% if </span><span class="vi">@vote</span><span class="o">.</span><span class="n">valid?</span> <span class="sx">%&gt;</span>
+<span class="lineno">2</span> <span class="sx">  $(&quot;#post_&lt;%= @post.slug %&gt;</span><span class="n">_votes</span><span class="s2">&quot;).html(&quot;</span><span class="o">&lt;%=</span> <span class="vi">@post</span><span class="o">.</span><span class="n">total_votes</span> <span class="sx">%&gt; votes&quot;)</span>
+<span class="lineno">3</span> <span class="sx">&lt;% else %&gt;</span>
+<span class="lineno">4</span>   <span class="n">alert</span><span class="p">(</span><span class="s1">&#39;You can only vote on a post once.&#39;</span><span class="p">);</span>
+<span class="lineno">5</span> <span class="o">&lt;</span><span class="sx">% end </span><span class="o">%&gt;</span></code></pre></div>
+
+<p>The javascript code shown above is pretty straightforward, it’s about replacing what’s inside the html tag that has <code>id</code> equals to <code>post_&lt;%= @post.slug %&gt;_votes</code> with html code:
+<code>erb
+&lt;%= @post.total_votes %&gt; votes
+</code></p>
+
+<h2 id="slugs"><strong>Slugs</strong></h2>
+<p>Slug, or semantic url, is a technique to transform url from pure numbers into more descriptive, readable words. Which not only make an web application more user friendly, it also helps improve the application’s SEO (search engine optimization) and protects the url from leaking informations related to the application or database. For example, <code>postit/users/8</code> will give away the that there are aorund 8 users registered for this particular web application.</p>
+
+<p>So we want to change <code>postit/users/8</code> into  <code>postit/users/eugene-chang</code> in our url when we’re displaying the user profile. We can start by</p>
+
+<h2 id="extract-common-logic-to-module"><strong>Extract Common Logic to Module</strong></h2>
+<p>Sometimes we have repeated logic and code across different models, for example, our slug function. Having repeated code across different models doesn’t just made the code more complex, it also become more difficult to maintain later on. So it’s best that we extract the common logic/code into a module, and just include the module for the model class that we need to use it, and it’s implementation is quite simple in rails:</p>
+
+<p>We want to put our extracted common logic under the folder <code>app/lib</code>, so we need to configure the path for rails to look for in <code>application.rb</code> file:</p>
+
+<p>ruby /config/application.rb</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="n">config</span><span class="o">.</span><span class="n">autoload_paths</span> <span class="o">+=</span> <span class="sx">%W(</span><span class="si">#{</span><span class="n">config</span><span class="o">.</span><span class="n">root</span><span class="si">}</span><span class="sx">/lib)</span> <span class="c1">#**find the file underneath root/lib</span></code></pre></div>
+
+<p>Now we can move all the logic related to slug into the module file under lo</p>
+
+<p>ruby /lib/sluggable.rb</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno"> 1</span> <span class="k">module</span> <span class="nn">Sluggable</span>
+<span class="lineno"> 2</span>   <span class="kp">extend</span> <span class="no">ActiveSupport</span><span class="o">::</span><span class="no">Concern</span>
+<span class="lineno"> 3</span> 
+<span class="lineno"> 4</span>   <span class="n">included</span> <span class="k">do</span> <span class="c1">#the code will be executed when this module is included</span>
+<span class="lineno"> 5</span>     <span class="n">before_save</span> <span class="ss">:generate_slug!</span>
+<span class="lineno"> 6</span>     <span class="n">class_attribute</span> <span class="ss">:slug_column</span>
+<span class="lineno"> 7</span>   <span class="k">end</span>
+<span class="lineno"> 8</span> 
+<span class="lineno"> 9</span>   <span class="k">def</span> <span class="nf">to_param</span>
+<span class="lineno">10</span>     <span class="nb">self</span><span class="o">.</span><span class="n">slug</span>
+<span class="lineno">11</span>   <span class="k">end</span>
+<span class="lineno">12</span> 
+<span class="lineno">13</span>   <span class="k">def</span> <span class="nf">generate_slug!</span>
+<span class="lineno">14</span>     <span class="c1">#self.slug = self.title.gsub(&quot; &quot;, &quot;-&quot;).downcase</span>
+<span class="lineno">15</span>     <span class="n">the_slug</span> <span class="o">=</span> <span class="n">to_slug</span><span class="p">(</span><span class="nb">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="nb">self</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">slug_column</span><span class="o">.</span><span class="n">to_sym</span><span class="p">))</span> <span class="c1">#change slug_column into symbol and pass it to to_slug method</span>
+<span class="lineno">16</span>     <span class="n">obj</span> <span class="o">=</span> <span class="nb">self</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">find_by</span> <span class="ss">slug</span><span class="p">:</span> <span class="n">the_slug</span>
+<span class="lineno">17</span>     <span class="n">count</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="lineno">18</span>     <span class="k">while</span> <span class="n">obj</span> <span class="o">&amp;&amp;</span> <span class="n">obj</span> <span class="o">!=</span> <span class="nb">self</span> <span class="c1">#while post object exists, and it&#39;s not the same object we&#39;re dealing with, need to append a number to it</span>
+<span class="lineno">19</span>       <span class="n">the_slug</span> <span class="o">=</span> <span class="n">append_suffix</span><span class="p">(</span><span class="n">the_slug</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span> <span class="c1">#two posts with same title will create same slug, not good!</span>
+<span class="lineno">20</span>       <span class="n">obj</span> <span class="o">=</span> <span class="nb">self</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">find_by</span> <span class="ss">slug</span><span class="p">:</span> <span class="n">the_slug</span>
+<span class="lineno">21</span>       <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="lineno">22</span>     <span class="k">end</span>
+<span class="lineno">23</span> 
+<span class="lineno">24</span>     <span class="nb">self</span><span class="o">.</span><span class="n">slug</span> <span class="o">=</span> <span class="n">the_slug</span><span class="o">.</span><span class="n">downcase</span>
+<span class="lineno">25</span> 
+<span class="lineno">26</span>   <span class="k">end</span>
+<span class="lineno">27</span> 
+<span class="lineno">28</span>   <span class="k">def</span> <span class="nf">append_suffix</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span>
+<span class="lineno">29</span>     <span class="k">if</span> <span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">last</span><span class="o">.</span><span class="n">to_i</span> <span class="o">!=</span> <span class="mi">0</span>
+<span class="lineno">30</span>       <span class="k">return</span> <span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span> <span class="o">+</span> <span class="n">count</span><span class="o">.</span><span class="n">to_s</span>
+<span class="lineno">31</span>     <span class="k">else</span>
+<span class="lineno">32</span>       <span class="k">return</span> <span class="n">str</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span> <span class="o">+</span> <span class="n">count</span><span class="o">.</span><span class="n">to_s</span>
+<span class="lineno">33</span>     <span class="k">end</span>
+<span class="lineno">34</span>   <span class="k">end</span>
+<span class="lineno">35</span> 
+<span class="lineno">36</span>   <span class="k">def</span> <span class="nf">to_slug</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+<span class="lineno">37</span>     <span class="n">str</span> <span class="o">=</span> <span class="nb">name</span><span class="o">.</span><span class="n">strip</span>
+<span class="lineno">38</span>     <span class="n">str</span><span class="o">.</span><span class="n">gsub!</span> <span class="sr">/\s*[^A-Za-z0-9]\s*/</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span>
+<span class="lineno">39</span>     <span class="n">str</span><span class="o">.</span><span class="n">gsub!</span> <span class="sr">/-+/</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span>
+<span class="lineno">40</span>     <span class="n">str</span><span class="o">.</span><span class="n">downcase</span>
+<span class="lineno">41</span>   <span class="k">end</span>
+<span class="lineno">42</span> 
+<span class="lineno">43</span>   <span class="k">module</span> <span class="nn">ClassMethods</span>
+<span class="lineno">44</span>     <span class="k">def</span> <span class="nf">sluggable_column</span><span class="p">(</span><span class="n">col_name</span><span class="p">)</span>
+<span class="lineno">45</span>       <span class="nb">self</span><span class="o">.</span><span class="n">slug_column</span> <span class="o">=</span> <span class="n">col_name</span>
+<span class="lineno">46</span>     <span class="k">end</span>
+<span class="lineno">47</span>   <span class="k">end</span>
+<span class="lineno">48</span> 
+<span class="lineno">49</span> <span class="k">end</span></code></pre></div>
+
+<p>Once I finished adding the module file, I can simply use the module by including it in the model:  </p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="k">class</span> <span class="nc">Post</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+<span class="lineno">2</span> 
+<span class="lineno">3</span>   <span class="kp">include</span> <span class="no">Sluggable</span>
+<span class="lineno">4</span>   
+<span class="lineno">5</span> <span class="k">end</span></code></pre></div>
+
+<h2 id="admin-role"><strong>Admin Role</strong></h2>
+<p>You definitely do not want all the users to be able to perform destructable actions. So it is better to set up a administration class users, and only grant these users the ability to perform destructable actions. This can be implemented by adding an ‘admin’ column to Users table, and add the following method to application controller:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="k">def</span> <span class="nf">require_admin</span>
+<span class="lineno">2</span>    <span class="n">access_denied</span> <span class="k">unless</span> <span class="n">logged_in?</span> <span class="ow">and</span> <span class="n">current_user</span><span class="o">.</span><span class="n">admin?</span>
+<span class="lineno">3</span>  <span class="k">end</span></code></pre></div>
+
+<h2 id="conclusion"><strong>Conclusion</strong></h2>
+<p>After much delay (about 15 days) I am finally done with the material of this week. The week 4 material is focused on some techniques to make a rails app more sophisticated, such as slug, admin role, and time zone. The final project took me a few days to work on it. Although I ran into a few hurdles, the overall process is very fun. There is no better way to feel accomplished as a programmer other than being able to bring your concept and idea to life with the skills you master.</p>
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2014/09/24/man-must-explore/" data-toggle="tooltip" data-placement="top" title="Man must explore, and this is exploration at its greatest">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2015/05/01/blog-finally-moved-to-github/" data-toggle="tooltip" data-placement="top" title="Finally Moved my blog from logdown to github!">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://twitter.com/SBootstrap">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        <a href="https://github.com/yuyueugene84">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Overlord's Blog 2015</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/clean-blog.min.js "></script>
+
+
+</body>
+
+</html>
