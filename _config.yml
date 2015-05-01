@@ -1,13 +1,13 @@
 # Site settings
-title: Clean Blog
-header-img: img/home-bg.jpg
-email: your-email@yourdomain.com
-description: "Write your site description here. It will be used as your sites meta description as well!"
+title: Overlord's Blog
+header-img: img/wall2.jpg
+email: yuyueugene84@gmail.com
+description: "70% American, 30% Taiwanese, Eat, Code, Play, Fuck"
 baseurl: ""
-url: "http://yourdomain.com"
+url: "http://yuyueugene84.github.io"
 twitter_username: SBootstrap
-github_username:  davidtmiller
-facebook_username:  IronSummitMedia
+github_username:  yuyueugene84
+facebook_username: 
 
 # Build settings
 markdown: kramdown

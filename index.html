@@ -1,6 +1,7 @@
 ---
 layout: page
-description: "A Clean Blog Theme by Start Bootstrap"
+description: "Success is not final, failure is not fatal, it is the courage to continue that counts. - Winston Churchill"
+header-img: "img/wall2.jpg"
 ---
 
 {% for post in paginator.posts %}
@@ -15,6 +16,19 @@ description: "A Clean Blog Theme by Start Bootstrap"
         {% endif %}
     </a>
     <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
+    {% for tag in post.tags%}
+      {% if tag == "Ruby on Rails" %}
+        <span class="label label-danger">Ruby on Rails</span>
+      {% elsif tag == "Javascript" %}
+        <span class="label label-success">Javascript</span>
+      {% elsif tag == "Research" %}
+        <span class="label label-primary">Research</span>
+      {% elsif tag == "Random Thoughts" %}
+        <span class="label label-warning">
+        Random Thoughts</span>
+      {% endif %}
+    {% endfor %}
+
 </div>
 <hr>
 {% endfor %}

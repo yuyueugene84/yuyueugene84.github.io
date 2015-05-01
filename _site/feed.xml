@@ -1,57 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Clean Blog</title>
-    <description>Write your site description here. It will be used as your sites meta description as well!</description>
-    <link>http://yourdomain.com/</link>
-    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 01 May 2015 13:06:10 +0800</pubDate>
-    <lastBuildDate>Fri, 01 May 2015 13:06:10 +0800</lastBuildDate>
+    <title>Overlord&#39;s Blog</title>
+    <description>70% American, 30% Taiwanese, Eat, Code, Play, Fuck</description>
+    <link>http://yuyueugene84.github.io/</link>
+    <atom:link href="http://yuyueugene84.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Fri, 01 May 2015 17:02:26 +0800</pubDate>
+    <lastBuildDate>Fri, 01 May 2015 17:02:26 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>Man must explore, and this is exploration at its greatest</title>
-        <description>&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman&#39;s earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
+        <title>Finally Moved my blog from logdown to github!</title>
+        <description>&lt;p&gt;Testing Testing&lt;/p&gt;
 
-&lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there&#39;s no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
+ruby 
 
-&lt;p&gt;What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt;   &lt;span class=&quot;no&quot;&gt;Client&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save!&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt;   &lt;span class=&quot;no&quot;&gt;Client&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upadte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That&#39;s how I felt seeing the Earth for the first time. I could not help but love and cherish her.&lt;/p&gt;
 
-&lt;p&gt;For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;The Final Frontier&lt;/h2&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;blockquote&gt;The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.&lt;/blockquote&gt;
-
-&lt;p&gt;Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;Reaching for the Stars&lt;/h2&gt;
-
-&lt;p&gt;As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;#&quot;&gt;
-    &lt;img src=&quot;/img/post-sample-image.jpg&quot; alt=&quot;Post Sample Image&quot; /&gt;
-&lt;/a&gt;
-&lt;span class=&quot;caption text-muted&quot;&gt;To go places and do things that have never been done before – that’s what living is all about.&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.&lt;/p&gt;
-
-&lt;p&gt;As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.&lt;/p&gt;
-
-&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://www.flickr.com/photos/nasacommons/&quot;&gt;NASA on The Commons&lt;/a&gt;.&lt;/p&gt;
+which one?
 </description>
-        <pubDate>Wed, 24 Sep 2014 20:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/startbootstrap-clean-blog-jekyll/2014/09/24/man-must-explore/</link>
-        <guid isPermaLink="true">http://yourdomain.com/startbootstrap-clean-blog-jekyll/2014/09/24/man-must-explore/</guid>
+        <pubDate>Fri, 01 May 2015 21:42:00 +0800</pubDate>
+        <link>http://yuyueugene84.github.io/2015/05/01/blog-finally-moved-to-github/</link>
+        <guid isPermaLink="true">http://yuyueugene84.github.io/2015/05/01/blog-finally-moved-to-github/</guid>
         
+        <category>Ruby on Rails</category>
         
-        <category>startbootstrap-clean-blog-jekyll</category>
+        <category>Javascript</category>
+        
+        <category>Research</category>
+        
+        <category>Random Thoughts</category>
+        
         
       </item>
     
@@ -93,8 +76,8 @@
 &lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://www.flickr.com/photos/nasacommons/&quot;&gt;NASA on The Commons&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Wed, 24 Sep 2014 20:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2014/09/24/man-must-explore/</link>
-        <guid isPermaLink="true">http://yourdomain.com/2014/09/24/man-must-explore/</guid>
+        <link>http://yuyueugene84.github.io/2014/09/24/man-must-explore/</link>
+        <guid isPermaLink="true">http://yuyueugene84.github.io/2014/09/24/man-must-explore/</guid>
         
         
       </item>
@@ -137,54 +120,8 @@
 &lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://www.flickr.com/photos/nasacommons/&quot;&gt;NASA on The Commons&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Thu, 18 Sep 2014 20:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/startbootstrap-clean-blog-jekyll/2014/09/18/i-believe/</link>
-        <guid isPermaLink="true">http://yourdomain.com/startbootstrap-clean-blog-jekyll/2014/09/18/i-believe/</guid>
-        
-        
-        <category>startbootstrap-clean-blog-jekyll</category>
-        
-      </item>
-    
-      <item>
-        <title>I believe every human has a finite number of heartbeats. I don&#39;t intend to waste any of mine.</title>
-        <description>&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman&#39;s earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
-
-&lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there&#39;s no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
-
-&lt;p&gt;What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.&lt;/p&gt;
-
-&lt;p&gt;A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That&#39;s how I felt seeing the Earth for the first time. I could not help but love and cherish her.&lt;/p&gt;
-
-&lt;p&gt;For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;The Final Frontier&lt;/h2&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;blockquote&gt;The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.&lt;/blockquote&gt;
-
-&lt;p&gt;Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;Reaching for the Stars&lt;/h2&gt;
-
-&lt;p&gt;As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;#&quot;&gt;
-    &lt;img src=&quot;/img/post-sample-image.jpg&quot; alt=&quot;Post Sample Image&quot; /&gt;
-&lt;/a&gt;
-&lt;span class=&quot;caption text-muted&quot;&gt;To go places and do things that have never been done before – that’s what living is all about.&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.&lt;/p&gt;
-
-&lt;p&gt;As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.&lt;/p&gt;
-
-&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://www.flickr.com/photos/nasacommons/&quot;&gt;NASA on The Commons&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 18 Sep 2014 20:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2014/09/18/i-believe/</link>
-        <guid isPermaLink="true">http://yourdomain.com/2014/09/18/i-believe/</guid>
+        <link>http://yuyueugene84.github.io/2014/09/18/i-believe/</link>
+        <guid isPermaLink="true">http://yuyueugene84.github.io/2014/09/18/i-believe/</guid>
         
         
       </item>
@@ -227,54 +164,8 @@
 &lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://www.flickr.com/photos/nasacommons/&quot;&gt;NASA on The Commons&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sun, 24 Aug 2014 20:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/startbootstrap-clean-blog-jekyll/2014/08/24/science-has-not-yet-mastered-prophecy/</link>
-        <guid isPermaLink="true">http://yourdomain.com/startbootstrap-clean-blog-jekyll/2014/08/24/science-has-not-yet-mastered-prophecy/</guid>
-        
-        
-        <category>startbootstrap-clean-blog-jekyll</category>
-        
-      </item>
-    
-      <item>
-        <title>Science has not yet mastered prophecy</title>
-        <description>&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman&#39;s earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
-
-&lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there&#39;s no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
-
-&lt;p&gt;What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.&lt;/p&gt;
-
-&lt;p&gt;A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That&#39;s how I felt seeing the Earth for the first time. I could not help but love and cherish her.&lt;/p&gt;
-
-&lt;p&gt;For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;The Final Frontier&lt;/h2&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;blockquote&gt;The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.&lt;/blockquote&gt;
-
-&lt;p&gt;Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;Reaching for the Stars&lt;/h2&gt;
-
-&lt;p&gt;As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;#&quot;&gt;
-    &lt;img src=&quot;/img/post-sample-image.jpg&quot; alt=&quot;Post Sample Image&quot; /&gt;
-&lt;/a&gt;
-&lt;span class=&quot;caption text-muted&quot;&gt;To go places and do things that have never been done before – that’s what living is all about.&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.&lt;/p&gt;
-
-&lt;p&gt;As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.&lt;/p&gt;
-
-&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://www.flickr.com/photos/nasacommons/&quot;&gt;NASA on The Commons&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 24 Aug 2014 20:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2014/08/24/science-has-not-yet-mastered-prophecy/</link>
-        <guid isPermaLink="true">http://yourdomain.com/2014/08/24/science-has-not-yet-mastered-prophecy/</guid>
+        <link>http://yuyueugene84.github.io/2014/08/24/science-has-not-yet-mastered-prophecy/</link>
+        <guid isPermaLink="true">http://yuyueugene84.github.io/2014/08/24/science-has-not-yet-mastered-prophecy/</guid>
         
         
       </item>
@@ -317,54 +208,8 @@
 &lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://www.flickr.com/photos/nasacommons/&quot;&gt;NASA on The Commons&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Tue, 08 Jul 2014 20:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/startbootstrap-clean-blog-jekyll/2014/07/08/failure-is-not-an-option/</link>
-        <guid isPermaLink="true">http://yourdomain.com/startbootstrap-clean-blog-jekyll/2014/07/08/failure-is-not-an-option/</guid>
-        
-        
-        <category>startbootstrap-clean-blog-jekyll</category>
-        
-      </item>
-    
-      <item>
-        <title>Failure is not an option</title>
-        <description>&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman&#39;s earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
-
-&lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there&#39;s no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
-
-&lt;p&gt;What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.&lt;/p&gt;
-
-&lt;p&gt;A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That&#39;s how I felt seeing the Earth for the first time. I could not help but love and cherish her.&lt;/p&gt;
-
-&lt;p&gt;For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;The Final Frontier&lt;/h2&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;p&gt;There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.&lt;/p&gt;
-
-&lt;blockquote&gt;The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.&lt;/blockquote&gt;
-
-&lt;p&gt;Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.&lt;/p&gt;
-
-&lt;h2 class=&quot;section-heading&quot;&gt;Reaching for the Stars&lt;/h2&gt;
-
-&lt;p&gt;As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;#&quot;&gt;
-    &lt;img src=&quot;/img/post-sample-image.jpg&quot; alt=&quot;Post Sample Image&quot; /&gt;
-&lt;/a&gt;
-&lt;span class=&quot;caption text-muted&quot;&gt;To go places and do things that have never been done before – that’s what living is all about.&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.&lt;/p&gt;
-
-&lt;p&gt;As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.&lt;/p&gt;
-
-&lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://www.flickr.com/photos/nasacommons/&quot;&gt;NASA on The Commons&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 08 Jul 2014 20:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2014/07/08/failure-is-not-an-option/</link>
-        <guid isPermaLink="true">http://yourdomain.com/2014/07/08/failure-is-not-an-option/</guid>
+        <link>http://yuyueugene84.github.io/2014/07/08/failure-is-not-an-option/</link>
+        <guid isPermaLink="true">http://yuyueugene84.github.io/2014/07/08/failure-is-not-an-option/</guid>
         
         
       </item>
@@ -407,14 +252,14 @@
 &lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://www.flickr.com/photos/nasacommons/&quot;&gt;NASA on The Commons&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Tue, 01 Jul 2014 20:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/2014/07/01/dreams/</link>
-        <guid isPermaLink="true">http://yourdomain.com/2014/07/01/dreams/</guid>
+        <link>http://yuyueugene84.github.io/2014/07/01/dreams/</link>
+        <guid isPermaLink="true">http://yuyueugene84.github.io/2014/07/01/dreams/</guid>
         
         
       </item>
     
       <item>
-        <title>The dreams of yesterday are the hopes of today and the reality of tomorrow.</title>
+        <title>Dinosaurs are extinct today</title>
         <description>&lt;p&gt;Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman&#39;s earth, if free men make it, will be truly round: a globe in practice, not in theory.&lt;/p&gt;
 
 &lt;p&gt;Science cuts two ways, of course; its products can be used for both good and evil. But there&#39;s no turning back from science. The early warnings about technological dangers also come from science.&lt;/p&gt;
@@ -450,12 +295,10 @@
 
 &lt;p&gt;Placeholder text by &lt;a href=&quot;http://spaceipsum.com/&quot;&gt;Space Ipsum&lt;/a&gt;. Photographs by &lt;a href=&quot;https://www.flickr.com/photos/nasacommons/&quot;&gt;NASA on The Commons&lt;/a&gt;.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 01 Jul 2014 20:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/startbootstrap-clean-blog-jekyll/2014/07/01/dreams/</link>
-        <guid isPermaLink="true">http://yourdomain.com/startbootstrap-clean-blog-jekyll/2014/07/01/dreams/</guid>
+        <pubDate>Tue, 10 Jun 2014 20:00:00 +0800</pubDate>
+        <link>http://yuyueugene84.github.io/2014/06/10/dinosaurs/</link>
+        <guid isPermaLink="true">http://yuyueugene84.github.io/2014/06/10/dinosaurs/</guid>
         
-        
-        <category>startbootstrap-clean-blog-jekyll</category>
         
       </item>
     
