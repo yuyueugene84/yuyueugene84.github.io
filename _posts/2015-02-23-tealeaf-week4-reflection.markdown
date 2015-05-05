@@ -5,7 +5,7 @@ subtitle:   ""
 date:       2015-02-23 13:42:00
 author:     "Overlord"
 header-img: "img/tealeaf2.png"
-tags:       ["Ruby on Rails", "Javascript", "Research", "Random Thoughts"]
+tags:       ["Ruby on Rails", "Random Thoughts"]
 ---
 
 ##**Overview**

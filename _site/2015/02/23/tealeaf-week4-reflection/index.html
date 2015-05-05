@@ -101,15 +101,17 @@
 				<h2 id="overview"><strong>Overview</strong></h2>
 <p>This is the last week of Tealeaf course two. Most of the materials this week is about taking thePostit project we built in week 3 and add some finishing touch to it. The topics include some intermediate level techniques such as slugs, Admin role, and time zone. It took me an extra two weeks to finish due to a nasty flu that kept me in bed for a week, plus a trip to Hong Kong that kept me away from my computer for a few days.</p>
 
-<p>My final Postit app is up and running at: </p>
+<p>My final Postit app is up and running at: 
+<a href="https://postit-eugene-chang.herokuapp.com/">My Postit</a></p>
 
-<p>https://postit-eugene-chang.herokuapp.com/</p>
+<p>My source code for this project is at:
+<a href="https://github.com/yuyueugene84/postit-solution">Postit on Github</a></p>
 
 <p>The last assignment of the course is about creating my own rails application in 3 to 4 days, the process was both fun and struggling, luckily, I completed all the functions I want in time. </p>
 
 <p>My final project is up and running at:</p>
 
-<p><a href="https://duck-on-rails.herokuapp.com">https://duck-on-rails.herokuapp.com/ </a></p>
+<p><a href="https://duck-on-rails.herokuapp.com">Duck on Rails</a></p>
 
 <p>I’ll make a blogpost about the my struggle during implemenation and the technical highlights of this app later.</p>
 
@@ -166,13 +168,13 @@ Notice the <code>Processing by PostsController#vote as JS</code>, which means th
 
 <p>We want to put our extracted common logic under the folder <code>app/lib</code>, so we need to configure the path for rails to look for in <code>application.rb</code> file:</p>
 
-<p>ruby /config/application.rb</p>
+<p><code>ruby /config/application.rb</code></p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="n">config</span><span class="o">.</span><span class="n">autoload_paths</span> <span class="o">+=</span> <span class="sx">%W(</span><span class="si">#{</span><span class="n">config</span><span class="o">.</span><span class="n">root</span><span class="si">}</span><span class="sx">/lib)</span> <span class="c1">#**find the file underneath root/lib</span></code></pre></div>
 
 <p>Now we can move all the logic related to slug into the module file under lo</p>
 
-<p>ruby /lib/sluggable.rb</p>
+<p><code>ruby /lib/sluggable.rb</code></p>
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno"> 1</span> <span class="k">module</span> <span class="nn">Sluggable</span>
 <span class="lineno"> 2</span>   <span class="kp">extend</span> <span class="no">ActiveSupport</span><span class="o">::</span><span class="no">Concern</span>

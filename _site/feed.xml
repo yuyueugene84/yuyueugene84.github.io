@@ -5,23 +5,31 @@
     <description>70% American, 30% Taiwanese, Eat, Code, Play, Fuck</description>
     <link>http://yuyueugene84.github.io/</link>
     <atom:link href="http://yuyueugene84.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 02 May 2015 00:50:23 +0800</pubDate>
-    <lastBuildDate>Sat, 02 May 2015 00:50:23 +0800</lastBuildDate>
+    <pubDate>Tue, 05 May 2015 10:58:34 +0800</pubDate>
+    <lastBuildDate>Tue, 05 May 2015 10:58:34 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Finally Moved my blog from logdown to github!</title>
-        <description>&lt;p&gt;Testing Testing&lt;/p&gt;
+        <description>&lt;h2 id=&quot;bloging&quot;&gt;&lt;strong&gt;Bloging&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Ever since I started spending a lot of time with Ruby on Rails, people always tell me that I must create and record the learning experience in my own blog. This post is about a few blogging service and solution I used or tried to use, and my thoughts on them.&lt;/p&gt;
 
-ruby 
+&lt;p&gt;&lt;strong&gt;tumblr&lt;/strong&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt;   &lt;span class=&quot;no&quot;&gt;Client&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save!&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt;   &lt;span class=&quot;no&quot;&gt;Client&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upadte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I first registered for tumblr back in my grad school days, I put the project but it turns out that it is very difficult to post code snippets on tumblr, plus tumblr is not a platform that is intended for engineers and programmers. &lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Logdown&lt;/strong&gt;&lt;/p&gt;
 
-which one?
+&lt;p&gt;I did some research and came across logdown, which is a nice blogging service built specifically for programmers, and its backend markdown editor makes blogging with code snippets a snap. I recorded most of my Tealeaf learning experience in Logdown, but the more blog I wrote the more I realized that Logdown has a lot of shortcomings, such as there is no way to include images and graphs in a blog post, because it is reserved as a premium feature in Logdown. So I that is when I decided to seek other blogging platform to replace Logdown.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Github Pages&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Then by some luck I found Github page, which is a way for github users to build blogs and official web pages of Github projects with Jekyll, then simply host them on Github! Although I know nothing about Jekyll, but like Kennedy said: “We choose to go to the moon in this decade and do the other things not because it was easy, but because it was hard!”. As an engineer, I should seek and embrace the unknown and push myself to grow. So I followed the official guide on github:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pages.github.com/ &quot;&gt;Github Pages&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And it took me around half an hour to build and host my blog on github, easy as pie!&lt;/p&gt;
+
 </description>
         <pubDate>Fri, 01 May 2015 21:42:00 +0800</pubDate>
         <link>http://yuyueugene84.github.io/2015/05/01/blog-finally-moved-to-github/</link>
@@ -29,11 +37,7 @@ which one?
         
         <category>Ruby on Rails</category>
         
-        <category>Javascript</category>
-        
         <category>Research</category>
-        
-        <category>Random Thoughts</category>
         
         
       </item>
@@ -43,15 +47,17 @@ which one?
         <description>&lt;h2 id=&quot;overview&quot;&gt;&lt;strong&gt;Overview&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;This is the last week of Tealeaf course two. Most of the materials this week is about taking thePostit project we built in week 3 and add some finishing touch to it. The topics include some intermediate level techniques such as slugs, Admin role, and time zone. It took me an extra two weeks to finish due to a nasty flu that kept me in bed for a week, plus a trip to Hong Kong that kept me away from my computer for a few days.&lt;/p&gt;
 
-&lt;p&gt;My final Postit app is up and running at: &lt;/p&gt;
+&lt;p&gt;My final Postit app is up and running at: 
+&lt;a href=&quot;https://postit-eugene-chang.herokuapp.com/&quot;&gt;My Postit&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;https://postit-eugene-chang.herokuapp.com/&lt;/p&gt;
+&lt;p&gt;My source code for this project is at:
+&lt;a href=&quot;https://github.com/yuyueugene84/postit-solution&quot;&gt;Postit on Github&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The last assignment of the course is about creating my own rails application in 3 to 4 days, the process was both fun and struggling, luckily, I completed all the functions I want in time. &lt;/p&gt;
 
 &lt;p&gt;My final project is up and running at:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://duck-on-rails.herokuapp.com&quot;&gt;https://duck-on-rails.herokuapp.com/ &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://duck-on-rails.herokuapp.com&quot;&gt;Duck on Rails&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I’ll make a blogpost about the my struggle during implemenation and the technical highlights of this app later.&lt;/p&gt;
 
@@ -108,13 +114,13 @@ Notice the &lt;code&gt;Processing by PostsController#vote as JS&lt;/code&gt;, wh
 
 &lt;p&gt;We want to put our extracted common logic under the folder &lt;code&gt;app/lib&lt;/code&gt;, so we need to configure the path for rails to look for in &lt;code&gt;application.rb&lt;/code&gt; file:&lt;/p&gt;
 
-&lt;p&gt;ruby /config/application.rb&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ruby /config/application.rb&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;autoload_paths&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%W(&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;/lib)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#**find the file underneath root/lib&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Now we can move all the logic related to slug into the module file under lo&lt;/p&gt;
 
-&lt;p&gt;ruby /lib/sluggable.rb&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ruby /lib/sluggable.rb&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Sluggable&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt;   &lt;span class=&quot;kp&quot;&gt;extend&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ActiveSupport&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Concern&lt;/span&gt;
@@ -189,10 +195,6 @@ Notice the &lt;code&gt;Processing by PostsController#vote as JS&lt;/code&gt;, wh
         <guid isPermaLink="true">http://yuyueugene84.github.io/2015/02/23/tealeaf-week4-reflection/</guid>
         
         <category>Ruby on Rails</category>
-        
-        <category>Javascript</category>
-        
-        <category>Research</category>
         
         <category>Random Thoughts</category>
         
