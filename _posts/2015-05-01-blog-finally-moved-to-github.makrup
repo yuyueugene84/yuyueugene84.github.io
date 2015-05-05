@@ -6,6 +6,7 @@ date:       2015-05-01 13:42:00
 author:     "Overlord"
 header-img: "img/post-bg-06.jpg"
 tags:       ["Ruby on Rails", "Javascript", "Research", "Random Thoughts"]
+comments:   true
 ---
 
 <p>Testing Testing</p>

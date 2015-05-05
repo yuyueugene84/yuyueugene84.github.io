@@ -12,14 +12,16 @@ tags:       ["Ruby on Rails", "Javascript", "Research", "Random Thoughts"]
 This is the last week of Tealeaf course two. Most of the materials this week is about taking thePostit project we built in week 3 and add some finishing touch to it. The topics include some intermediate level techniques such as slugs, Admin role, and time zone. It took me an extra two weeks to finish due to a nasty flu that kept me in bed for a week, plus a trip to Hong Kong that kept me away from my computer for a few days.
 
 My final Postit app is up and running at: 
+<a href="https://postit-eugene-chang.herokuapp.com/">My Postit</a>
 
-https://postit-eugene-chang.herokuapp.com/
+My source code for this project is at:
+<a href="https://github.com/yuyueugene84/postit-solution">Postit on Github</a>
 
 The last assignment of the course is about creating my own rails application in 3 to 4 days, the process was both fun and struggling, luckily, I completed all the functions I want in time. 
 
 My final project is up and running at:
 
-<a href="https://duck-on-rails.herokuapp.com">https://duck-on-rails.herokuapp.com/ </a>
+<a href="https://duck-on-rails.herokuapp.com">Duck on Rails</a>
 
 I'll make a blogpost about the my struggle during implemenation and the technical highlights of this app later.
 
@@ -81,15 +83,14 @@ Sometimes we have repeated logic and code across different models, for example, 
 
 We want to put our extracted common logic under the folder ```app/lib```, so we need to configure the path for rails to look for in ```application.rb``` file:
 
-ruby /config/application.rb
+```ruby /config/application.rb```
 {% highlight ruby linenos%}
 config.autoload_paths += %W(#{config.root}/lib) #**find the file underneath root/lib
 {% endhighlight %}
 
 Now we can move all the logic related to slug into the module file under lo
 
-ruby /lib/sluggable.rb
-
+```ruby /lib/sluggable.rb```
 {% highlight ruby linenos%}
 module Sluggable
   extend ActiveSupport::Concern
