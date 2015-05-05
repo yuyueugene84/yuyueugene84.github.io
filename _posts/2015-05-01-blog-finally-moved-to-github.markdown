@@ -10,7 +10,7 @@ comments:   true
 ---
 
 
-##**Bloging**
+##**Blogging**
 Ever since I started spending a lot of time with Ruby on Rails, people always tell me that I must create and record the learning experience in my own blog. This post is about a few blogging service and solution I used or tried to use, and my thoughts on them.
 
 **tumblr**

@@ -5,13 +5,13 @@
     <description>70% American, 30% Taiwanese, Eat, Code, Play, Fuck</description>
     <link>http://yuyueugene84.github.io/</link>
     <atom:link href="http://yuyueugene84.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 05 May 2015 10:58:34 +0800</pubDate>
-    <lastBuildDate>Tue, 05 May 2015 10:58:34 +0800</lastBuildDate>
+    <pubDate>Tue, 05 May 2015 15:06:29 +0800</pubDate>
+    <lastBuildDate>Tue, 05 May 2015 15:06:29 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Finally Moved my blog from logdown to github!</title>
-        <description>&lt;h2 id=&quot;bloging&quot;&gt;&lt;strong&gt;Bloging&lt;/strong&gt;&lt;/h2&gt;
+        <description>&lt;h2 id=&quot;blogging&quot;&gt;&lt;strong&gt;Blogging&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;Ever since I started spending a lot of time with Ruby on Rails, people always tell me that I must create and record the learning experience in my own blog. This post is about a few blogging service and solution I used or tried to use, and my thoughts on them.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;tumblr&lt;/strong&gt;&lt;/p&gt;
@@ -43,7 +43,7 @@
       </item>
     
       <item>
-        <title>Tealeaf Academy Week4 Reflection</title>
+        <title>Tealeaf Academy Course2 Week4 Reflection</title>
         <description>&lt;h2 id=&quot;overview&quot;&gt;&lt;strong&gt;Overview&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;This is the last week of Tealeaf course two. Most of the materials this week is about taking thePostit project we built in week 3 and add some finishing touch to it. The topics include some intermediate level techniques such as slugs, Admin role, and time zone. It took me an extra two weeks to finish due to a nasty flu that kept me in bed for a week, plus a trip to Hong Kong that kept me away from my computer for a few days.&lt;/p&gt;
 
@@ -197,6 +197,320 @@ Notice the &lt;code&gt;Processing by PostsController#vote as JS&lt;/code&gt;, wh
         <category>Ruby on Rails</category>
         
         <category>Random Thoughts</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Tealeaf Academy Course2 Week3 Reflection</title>
+        <description>&lt;h2 id=&quot;overview&quot;&gt;&lt;strong&gt;Overview&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;The most important topic covered this week is the concept and implementation of Authenication using Ruby on Rails. Authenication is one of the major functions that separates a professional application from an amatuer/toy application. From my past experience of programming ASP.NET, my limited understaning of authenication is a simple string comparison by doing:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user_pass&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sql_execute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;password&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user_table&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;input_username&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user_pass&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input_userpassword&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt;   &lt;span class=&quot;no&quot;&gt;Authorized&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt;   &lt;span class=&quot;no&quot;&gt;Warning&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;After going through all the material this week, I realized how naive and limited my comprehension is on the subject.
+Other important topics include the polymorphic association, where in a 1:M association, a model can belongs_to multiple models with a single association, this is critically important because on the databse level, it not only keeps the data schema simple and clean, it also greatly reduces the wasted space. 
+Another important topic is the &lt;strong&gt;Member / Collection&lt;/strong&gt; keyword, which allows user to add more routes than the default seven RESTful routes set by rails. Concepts of Memoization and flash are also introduced.&lt;/p&gt;
+
+&lt;h2 id=&quot;authenication&quot;&gt;&lt;strong&gt;Authenication&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Chris mentioned an important concept about authenication during lecture, and that is &lt;strong&gt;one-way hashing&lt;/strong&gt;. For modern authenication systems, storing a user’s actual password in database can lead to major security issues. So it is better to use one-way hashing method, which is to use hashing algorithms to turn a user input password into a unique string, and compare the hashed strings instead of the actual password everytime when users try to log in. In Rails, there is a built-in function in ActiveModel called &lt;strong&gt;has_secure_password&lt;/strong&gt;, which will automatically set and authenicate Bycryt password. &lt;strong&gt;has_secure_password&lt;/strong&gt; requires an attribute caled &lt;strong&gt;password_digest&lt;/strong&gt; in the same model in order to work, which stores the unique string that is hashed by Bycrpt algorithm. &lt;/p&gt;
+
+&lt;p&gt;The implementation include the following steps:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;add &lt;strong&gt;‘bcrypt-ruby’&lt;/strong&gt; gem to Gemfile:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;bcrypt-ruby&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;~&amp;gt; 3.0.0&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then run &lt;code&gt;bundle install&lt;/code&gt;.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;generate a migration file and add &lt;strong&gt;password_digest&lt;/strong&gt; column to the &lt;strong&gt;users&lt;/strong&gt; table in database.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;change&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;add_column&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:users&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:password_digest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:string&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then run &lt;code&gt;rake db:migrate&lt;/code&gt;.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;has_secure_password&lt;/strong&gt; adds methods to set and authenticate against a BCrypt password, it has built-in validation frameworks, but for our project we want to build our own, so we set the built-in validation to false and add our own validation, which are username and password. Which can be written as the following:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;User&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ActiveRecord&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt;  
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;has_secure_password&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;validations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt;  
+&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;validates&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:username&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;presence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;uniqueness&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;validates&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:password&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;presence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;minimum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;7&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;*Notice that setting &lt;strong&gt;has_secure_password&lt;/strong&gt; will give us two virtual attributes for the user model, which are &lt;strong&gt;password&lt;/strong&gt; and &lt;strong&gt;password_confirmation&lt;/strong&gt;, they do not appear in the database layer nor the model, but they are essential to the mechanism of &lt;strong&gt;has_secure_password&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;validation&quot;&gt;&lt;strong&gt;Validation&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;After we set up the the autehnication in the user model, we can add some mehtods in applicaiton controller to help perform validation in our application:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;application_controller.rb&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ApplicationController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ActionController&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# Prevent CSRF attacks by raising an exception.&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# For APIs, you may want to use :null_session instead.&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;protect_from_forgery&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:exception&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;helper_method&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:current_user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:logged_in?&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;#make these methods available to view templates&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;current_user&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt;      &lt;span class=&quot;vi&quot;&gt;@current_user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:user_id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:user_id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;#memorization technique, if @current_user object is nil, and session hash has an user_id, then find the user in the database with the same user_id from session hash.&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;logged_in?&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;!!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;current_user&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#check if there is a user, !! turns any object into a boolean value.&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;17&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;18&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;19&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;require_user&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#this method is used to restrict actions that require authenication&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;20&lt;/span&gt;      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;logged_in?&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;21&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;flash&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:notice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;You must be logged in to do that!&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;22&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;redirect_to&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:back&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;23&lt;/span&gt;      &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;24&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;25&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Notice that &lt;strong&gt;helper_method&lt;/strong&gt; will make these methods accessible to views.
+  validates_uniqueness_of :scope&lt;/p&gt;
+
+&lt;h2 id=&quot;routing-members-and-collection&quot;&gt;&lt;strong&gt;Routing: Members and Collection&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Sometimes we need to create actions that are outside the default seven RESTFUL actions provided by Rails, this is where &lt;strong&gt;Members&lt;/strong&gt; and &lt;strong&gt;Collection&lt;/strong&gt; keywords come in. In short, &lt;strong&gt;members&lt;/strong&gt; is used to add addtional action to a specific member of the resource, and collection is used add additional action to a collection of resource. &lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;URL&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;URL helper&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Action&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/photos/1/preview&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;preview_photo_path(photo)&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;photos#preview&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/posts/archive&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;archive_photos_path&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;photos#archive&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;In the case of our postit project:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;resources&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:posts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;except&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:destroy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;member&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;  
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:vote&lt;/span&gt;  
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt;   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;will give us the following routes: &lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;path&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;url helper&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;action&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;http verb&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/posts&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;posts_path&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;posts#index&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;GET&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/posts/new&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;new_posts_path&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;posts#new&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;GET&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/posts/:id&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;post_path(@post)&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;posts#show&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;GET&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/posts/:id/edit&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;edit_post_path(@post)&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;posts#edit&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;GET&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/posts/:id&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;posts#create&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;POST&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/posts/:id&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;posts#update&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;PATCH&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/posts/:id&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;posts#update&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;PUT&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/posts/:id/vote&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;vote_post_path(@post)&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;posts#vote&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;POST&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;Polymorphic Association&lt;/strong&gt;
+One of the most important concepts of this week is &lt;strong&gt;Polymorphic Association&lt;/strong&gt;. With polymorphic associations, a model can belong to more than one other model, on a single association. Traditionally, if we want to associate a model and multiple other models with 1:M associations, then
+on the database level, the table will look like:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;id&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;user_id&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;vote&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;post_id&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;comment_id&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;true&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;false&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;true&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;However, this will waste lots of space on the database level, so an alternative and better way of doing this would be:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;id&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;user_id&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;vote&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;voteable_id&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;voteable_type&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;true&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;post&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;false&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;comment&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;true&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;post&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Notice the &lt;strong&gt;able&lt;/strong&gt; must be added to the column name for the polymorphic association to work.
+The associations in the models should be set up like the following:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;vote.rb&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Vote&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ActiveRecord&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;belongs_to&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:voteable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;polymorphic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;post.rb&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Post&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ActiveRecord&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;has_many&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:votes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;as&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:voteable&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;comment.rb&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Comment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ActiveRecord&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;has_many&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:votes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;as&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:voteable&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;memoization&quot;&gt;&lt;strong&gt;Memoization&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Since this is an important topic I’m gonna make a separate blog post about it.&lt;/p&gt;
+
+&lt;h2 id=&quot;flashnotice-vs-flashnow&quot;&gt;&lt;strong&gt;flash[:notice] vs flash.now&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;The flash is a special part of the session which is cleared with each request. This means that values stored there will only be available in the next request, which is useful for passing errormessages. It is accessed in much the same way as the session, as a hash &lt;code&gt;flash[:notice]&lt;/code&gt;. By default, adding values to the flash will make them available to the next request, but sometimes you may want to access those values in the same request.&lt;/p&gt;
+
+&lt;p&gt;Notice that there are two different flash methods, but there’s a simple rule of thumb to determine how each method should be used: &lt;/p&gt;
+
+&lt;p&gt;When redirecting use: &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flash&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:notice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;This message value is available in next request-response cycle&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;When rendering use:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flash&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:notice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Message is available in same request-response cycle&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;blank-comment-blows-up&quot;&gt;&lt;strong&gt;Blank Comment Blows up&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;After going through this week’s lesson, I had a much better understanding of the concept and implementation of authenication functions and realizing how little I used to know about it. 
+The polymorphic association &lt;/p&gt;
+</description>
+        <pubDate>Mon, 02 Feb 2015 21:42:00 +0800</pubDate>
+        <link>http://yuyueugene84.github.io/2015/02/02/tealeaf-week3-reflection/</link>
+        <guid isPermaLink="true">http://yuyueugene84.github.io/2015/02/02/tealeaf-week3-reflection/</guid>
+        
+        <category>Ruby on Rails</category>
+        
+        <category>Research</category>
         
         
       </item>

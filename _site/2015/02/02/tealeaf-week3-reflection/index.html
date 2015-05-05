@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="70% American, 30% Taiwanese, Eat, Code, Play, Fuck">
+
+    <title>Tealeaf Academy Course2 Week3 Reflection - Overlord's Blog</title>
+
+    <link rel="canonical" href="http://yuyueugene84.github.io/2015/02/02/tealeaf-week3-reflection/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/clean-blog.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Overlord's Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+                <li>
+                    <a href="/about/">About Me</a>
+                </li>
+                
+                <li>
+                    <a href="/contact/">Contact</a>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/post-bg-06.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Tealeaf Academy Course2 Week3 Reflection</h1>
+                    
+                    <h2 class="subheading"></h2>
+                    
+                    <span class="meta">Posted by Overlord on February 2, 2015</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<h2 id="overview"><strong>Overview</strong></h2>
+<p>The most important topic covered this week is the concept and implementation of Authenication using Ruby on Rails. Authenication is one of the major functions that separates a professional application from an amatuer/toy application. From my past experience of programming ASP.NET, my limited understaning of authenication is a simple string comparison by doing:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="n">user_pass</span> <span class="o">=</span> <span class="n">sql_execute</span><span class="p">(</span> <span class="nb">select</span> <span class="n">user</span><span class="o">.</span><span class="n">password</span> <span class="n">from</span> <span class="n">user_table</span> <span class="n">where</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;input_username&quot;</span> <span class="p">)</span>
+<span class="lineno">2</span> <span class="k">if</span> <span class="n">user_pass</span> <span class="o">==</span> <span class="n">input_userpassword</span> 
+<span class="lineno">3</span>   <span class="no">Authorized</span>
+<span class="lineno">4</span> <span class="k">else</span>
+<span class="lineno">5</span>   <span class="no">Warning</span>
+<span class="lineno">6</span> <span class="k">end</span></code></pre></div>
+
+<p>After going through all the material this week, I realized how naive and limited my comprehension is on the subject.
+Other important topics include the polymorphic association, where in a 1:M association, a model can belongs_to multiple models with a single association, this is critically important because on the databse level, it not only keeps the data schema simple and clean, it also greatly reduces the wasted space. 
+Another important topic is the <strong>Member / Collection</strong> keyword, which allows user to add more routes than the default seven RESTful routes set by rails. Concepts of Memoization and flash are also introduced.</p>
+
+<h2 id="authenication"><strong>Authenication</strong></h2>
+<p>Chris mentioned an important concept about authenication during lecture, and that is <strong>one-way hashing</strong>. For modern authenication systems, storing a user’s actual password in database can lead to major security issues. So it is better to use one-way hashing method, which is to use hashing algorithms to turn a user input password into a unique string, and compare the hashed strings instead of the actual password everytime when users try to log in. In Rails, there is a built-in function in ActiveModel called <strong>has_secure_password</strong>, which will automatically set and authenicate Bycryt password. <strong>has_secure_password</strong> requires an attribute caled <strong>password_digest</strong> in the same model in order to work, which stores the unique string that is hashed by Bycrpt algorithm. </p>
+
+<p>The implementation include the following steps:</p>
+
+<ol>
+  <li>add <strong>‘bcrypt-ruby’</strong> gem to Gemfile:</li>
+</ol>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="n">gem</span> <span class="s1">&#39;bcrypt-ruby&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 3.0.0&#39;</span></code></pre></div>
+
+<p>Then run <code>bundle install</code>.</p>
+
+<ol>
+  <li>generate a migration file and add <strong>password_digest</strong> column to the <strong>users</strong> table in database.</li>
+</ol>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="k">def</span> <span class="nf">change</span>
+<span class="lineno">2</span>   <span class="n">add_column</span> <span class="ss">:users</span><span class="p">,</span> <span class="ss">:password_digest</span><span class="p">,</span> <span class="ss">:string</span>
+<span class="lineno">3</span> <span class="k">end</span></code></pre></div>
+
+<p>Then run <code>rake db:migrate</code>.</p>
+
+<ol>
+  <li><strong>has_secure_password</strong> adds methods to set and authenticate against a BCrypt password, it has built-in validation frameworks, but for our project we want to build our own, so we set the built-in validation to false and add our own validation, which are username and password. Which can be written as the following:</li>
+</ol>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+<span class="lineno">2</span>  
+<span class="lineno">3</span>  <span class="n">has_secure_password</span> <span class="ss">validations</span><span class="p">:</span> <span class="kp">false</span>
+<span class="lineno">4</span>  
+<span class="lineno">5</span>  <span class="n">validates</span> <span class="ss">:username</span><span class="p">,</span> <span class="ss">presence</span><span class="p">:</span> <span class="kp">true</span><span class="p">,</span> <span class="ss">uniqueness</span><span class="p">:</span> <span class="kp">true</span>
+<span class="lineno">6</span>  <span class="n">validates</span> <span class="ss">:password</span><span class="p">,</span> <span class="ss">presence</span><span class="p">:</span> <span class="kp">true</span><span class="p">,</span> <span class="ss">on</span><span class="p">:</span> <span class="ss">:create</span><span class="p">,</span> <span class="ss">length</span><span class="p">:</span> <span class="p">{</span><span class="ss">minimum</span><span class="p">:</span> <span class="mi">5</span><span class="p">}</span>
+<span class="lineno">7</span> 
+<span class="lineno">8</span> <span class="k">end</span></code></pre></div>
+
+<p>*Notice that setting <strong>has_secure_password</strong> will give us two virtual attributes for the user model, which are <strong>password</strong> and <strong>password_confirmation</strong>, they do not appear in the database layer nor the model, but they are essential to the mechanism of <strong>has_secure_password</strong>.</p>
+
+<h2 id="validation"><strong>Validation</strong></h2>
+<p>After we set up the the autehnication in the user model, we can add some mehtods in applicaiton controller to help perform validation in our application:</p>
+
+<p><code>application_controller.rb</code></p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno"> 1</span> <span class="k">class</span> <span class="nc">ApplicationController</span> <span class="o">&lt;</span> <span class="no">ActionController</span><span class="o">::</span><span class="no">Base</span>
+<span class="lineno"> 2</span>   <span class="c1"># Prevent CSRF attacks by raising an exception.</span>
+<span class="lineno"> 3</span>   <span class="c1"># For APIs, you may want to use :null_session instead.</span>
+<span class="lineno"> 4</span> 
+<span class="lineno"> 5</span>    <span class="n">protect_from_forgery</span> <span class="ss">with</span><span class="p">:</span> <span class="ss">:exception</span>
+<span class="lineno"> 6</span> 
+<span class="lineno"> 7</span>    <span class="n">helper_method</span> <span class="ss">:current_user</span><span class="p">,</span> <span class="ss">:logged_in?</span>
+<span class="lineno"> 8</span>    <span class="c1">#make these methods available to view templates</span>
+<span class="lineno"> 9</span> 
+<span class="lineno">10</span>    <span class="k">def</span> <span class="nf">current_user</span>
+<span class="lineno">11</span>      <span class="vi">@current_user</span> <span class="o">||=</span> <span class="no">User</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">session</span><span class="o">[</span><span class="ss">:user_id</span><span class="o">]</span><span class="p">)</span> <span class="k">if</span> <span class="n">session</span><span class="o">[</span><span class="ss">:user_id</span><span class="o">]</span>
+<span class="lineno">12</span>      <span class="c1">#memorization technique, if @current_user object is nil, and session hash has an user_id, then find the user in the database with the same user_id from session hash.</span>
+<span class="lineno">13</span>    <span class="k">end</span>
+<span class="lineno">14</span> 
+<span class="lineno">15</span>    <span class="k">def</span> <span class="nf">logged_in?</span>
+<span class="lineno">16</span>      <span class="o">!!</span><span class="n">current_user</span> <span class="c1">#check if there is a user, !! turns any object into a boolean value.</span>
+<span class="lineno">17</span>    <span class="k">end</span>
+<span class="lineno">18</span> 
+<span class="lineno">19</span>    <span class="k">def</span> <span class="nf">require_user</span> <span class="c1">#this method is used to restrict actions that require authenication</span>
+<span class="lineno">20</span>      <span class="k">if</span> <span class="o">!</span><span class="n">logged_in?</span>
+<span class="lineno">21</span>        <span class="n">flash</span><span class="o">[</span><span class="ss">:notice</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;You must be logged in to do that!&quot;</span>
+<span class="lineno">22</span>        <span class="n">redirect_to</span> <span class="ss">:back</span>
+<span class="lineno">23</span>      <span class="k">end</span>
+<span class="lineno">24</span>    <span class="k">end</span>
+<span class="lineno">25</span> <span class="k">end</span></code></pre></div>
+
+<p>Notice that <strong>helper_method</strong> will make these methods accessible to views.
+  validates_uniqueness_of :scope</p>
+
+<h2 id="routing-members-and-collection"><strong>Routing: Members and Collection</strong></h2>
+<p>Sometimes we need to create actions that are outside the default seven RESTFUL actions provided by Rails, this is where <strong>Members</strong> and <strong>Collection</strong> keywords come in. In short, <strong>members</strong> is used to add addtional action to a specific member of the resource, and collection is used add additional action to a collection of resource. </p>
+
+<table>
+  <thead>
+    <tr>
+      <th>URL</th>
+      <th style="text-align: center">URL helper</th>
+      <th style="text-align: right">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>/photos/1/preview</td>
+      <td style="text-align: center">preview_photo_path(photo)</td>
+      <td style="text-align: right">photos#preview</td>
+    </tr>
+    <tr>
+      <td>/posts/archive</td>
+      <td style="text-align: center">archive_photos_path</td>
+      <td style="text-align: right">photos#archive</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>In the case of our postit project:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="n">resources</span> <span class="ss">:posts</span><span class="p">,</span> <span class="ss">except</span><span class="p">:</span> <span class="o">[</span><span class="ss">:destroy</span><span class="o">]</span> <span class="k">do</span>
+<span class="lineno">2</span>   <span class="n">member</span> <span class="k">do</span>  
+<span class="lineno">3</span>     <span class="n">post</span> <span class="ss">:vote</span>  
+<span class="lineno">4</span>   <span class="k">end</span></code></pre></div>
+
+<p>will give us the following routes: </p>
+
+<table>
+  <thead>
+    <tr>
+      <th>path</th>
+      <th style="text-align: center">url helper</th>
+      <th style="text-align: center">action</th>
+      <th style="text-align: right">http verb</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>/posts</td>
+      <td style="text-align: center">posts_path</td>
+      <td style="text-align: center">posts#index</td>
+      <td style="text-align: right">GET</td>
+    </tr>
+    <tr>
+      <td>/posts/new</td>
+      <td style="text-align: center">new_posts_path</td>
+      <td style="text-align: center">posts#new</td>
+      <td style="text-align: right">GET</td>
+    </tr>
+    <tr>
+      <td>/posts/:id</td>
+      <td style="text-align: center">post_path(@post)</td>
+      <td style="text-align: center">posts#show</td>
+      <td style="text-align: right">GET</td>
+    </tr>
+    <tr>
+      <td>/posts/:id/edit</td>
+      <td style="text-align: center">edit_post_path(@post)</td>
+      <td style="text-align: center">posts#edit</td>
+      <td style="text-align: right">GET</td>
+    </tr>
+    <tr>
+      <td>/posts/:id</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">posts#create</td>
+      <td style="text-align: right">POST</td>
+    </tr>
+    <tr>
+      <td>/posts/:id</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">posts#update</td>
+      <td style="text-align: right">PATCH</td>
+    </tr>
+    <tr>
+      <td>/posts/:id</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">posts#update</td>
+      <td style="text-align: right">PUT</td>
+    </tr>
+    <tr>
+      <td>/posts/:id/vote</td>
+      <td style="text-align: center">vote_post_path(@post)</td>
+      <td style="text-align: center">posts#vote</td>
+      <td style="text-align: right">POST</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Polymorphic Association</strong>
+One of the most important concepts of this week is <strong>Polymorphic Association</strong>. With polymorphic associations, a model can belong to more than one other model, on a single association. Traditionally, if we want to associate a model and multiple other models with 1:M associations, then
+on the database level, the table will look like:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th style="text-align: center">user_id</th>
+      <th style="text-align: center">vote</th>
+      <th style="text-align: center">post_id</th>
+      <th style="text-align: right">comment_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">true</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">false</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right">2</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">true</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: right"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>However, this will waste lots of space on the database level, so an alternative and better way of doing this would be:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th style="text-align: center">user_id</th>
+      <th style="text-align: center">vote</th>
+      <th style="text-align: center">voteable_id</th>
+      <th style="text-align: right">voteable_type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">true</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: right">post</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">false</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: right">comment</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">true</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: right">post</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Notice the <strong>able</strong> must be added to the column name for the polymorphic association to work.
+The associations in the models should be set up like the following:</p>
+
+<p><code>vote.rb</code></p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="k">class</span> <span class="nc">Vote</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+<span class="lineno">2</span>   <span class="n">belongs_to</span> <span class="ss">:voteable</span><span class="p">,</span> <span class="ss">polymorphic</span><span class="p">:</span> <span class="kp">true</span>
+<span class="lineno">3</span> <span class="k">end</span></code></pre></div>
+
+<p><code>post.rb</code></p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="k">class</span> <span class="nc">Post</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+<span class="lineno">2</span>   <span class="n">has_many</span> <span class="ss">:votes</span><span class="p">,</span> <span class="ss">as</span><span class="p">:</span> <span class="ss">:voteable</span>
+<span class="lineno">3</span> <span class="k">end</span></code></pre></div>
+
+<p><code>comment.rb</code></p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="k">class</span> <span class="nc">Comment</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+<span class="lineno">2</span>   <span class="n">has_many</span> <span class="ss">:votes</span><span class="p">,</span> <span class="ss">as</span><span class="p">:</span> <span class="ss">:voteable</span>
+<span class="lineno">3</span> <span class="k">end</span></code></pre></div>
+
+<h2 id="memoization"><strong>Memoization</strong></h2>
+<p>Since this is an important topic I’m gonna make a separate blog post about it.</p>
+
+<h2 id="flashnotice-vs-flashnow"><strong>flash[:notice] vs flash.now</strong></h2>
+<p>The flash is a special part of the session which is cleared with each request. This means that values stored there will only be available in the next request, which is useful for passing errormessages. It is accessed in much the same way as the session, as a hash <code>flash[:notice]</code>. By default, adding values to the flash will make them available to the next request, but sometimes you may want to access those values in the same request.</p>
+
+<p>Notice that there are two different flash methods, but there’s a simple rule of thumb to determine how each method should be used: </p>
+
+<p>When redirecting use: </p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="n">flash</span><span class="o">[</span><span class="ss">:notice</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;This message value is available in next request-response cycle&quot;</span></code></pre></div>
+
+<p>When rendering use:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="n">flash</span><span class="o">.</span><span class="n">now</span><span class="o">[</span><span class="ss">:notice</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;Message is available in same request-response cycle&quot;</span></code></pre></div>
+
+<h2 id="blank-comment-blows-up"><strong>Blank Comment Blows up</strong></h2>
+
+<h2 id="conclusion"><strong>Conclusion</strong></h2>
+
+<p>After going through this week’s lesson, I had a much better understanding of the concept and implementation of authenication functions and realizing how little I used to know about it. 
+The polymorphic association </p>
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2014/09/24/man-must-explore/" data-toggle="tooltip" data-placement="top" title="Man must explore, and this is exploration at its greatest">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2015/02/23/tealeaf-week4-reflection/" data-toggle="tooltip" data-placement="top" title="Tealeaf Academy Course2 Week4 Reflection">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://twitter.com/SBootstrap">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    <li>
+                        <a href="https://github.com/yuyueugene84">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Overlord's Blog 2015</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/clean-blog.min.js "></script>
+
+
+</body>
+
+</html>
