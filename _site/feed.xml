@@ -5,8 +5,8 @@
     <description>70% American, 30% Taiwanese, Eat, Code, Play, Fuck</description>
     <link>http://yuyueugene84.github.io/</link>
     <atom:link href="http://yuyueugene84.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 05 May 2015 15:06:29 +0800</pubDate>
-    <lastBuildDate>Tue, 05 May 2015 15:06:29 +0800</lastBuildDate>
+    <pubDate>Thu, 07 May 2015 00:44:51 +0800</pubDate>
+    <lastBuildDate>Thu, 07 May 2015 00:44:51 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -189,6 +189,22 @@ Notice the &lt;code&gt;Processing by PostsController#vote as JS&lt;/code&gt;, wh
 
 &lt;h2 id=&quot;conclusion&quot;&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;After much delay (about 15 days) I am finally done with the material of this week. The week 4 material is focused on some techniques to make a rails app more sophisticated, such as slug, admin role, and time zone. The final project took me a few days to work on it. Although I ran into a few hurdles, the overall process is very fun. There is no better way to feel accomplished as a programmer other than being able to bring your concept and idea to life with the skills you master.&lt;/p&gt;
+
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = &#39;yuyueugene84githubio&#39;;
+    
+    /* * * DON&#39;T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement(&#39;script&#39;); dsq.type = &#39;text/javascript&#39;; dsq.async = true;
+        dsq.src = &#39;//&#39; + disqus_shortname + &#39;.disqus.com/embed.js&#39;;
+        (document.getElementsByTagName(&#39;head&#39;)[0] || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/?ref_noscript&quot; rel=&quot;nofollow&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+
 </description>
         <pubDate>Mon, 23 Feb 2015 21:42:00 +0800</pubDate>
         <link>http://yuyueugene84.github.io/2015/02/23/tealeaf-week4-reflection/</link>

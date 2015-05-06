@@ -4,7 +4,7 @@ title:      "Tealeaf Academy Course2 Week3 Reflection"
 subtitle:   ""
 date:       2015-02-02 13:42:00
 author:     "Overlord"
-header-img: "img/post-bg-06.jpg"
+header-img: "img/tealeaf2.png"
 tags:       ["Ruby on Rails", "Research"]
 comments:   true
 ---

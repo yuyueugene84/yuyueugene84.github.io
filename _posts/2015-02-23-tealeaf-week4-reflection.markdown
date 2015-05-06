@@ -6,6 +6,7 @@ date:       2015-02-23 13:42:00
 author:     "Overlord"
 header-img: "img/tealeaf2.png"
 tags:       ["Ruby on Rails", "Random Thoughts"]
+comments: true
 ---
 
 ##**Overview**
@@ -163,3 +164,6 @@ You definitely do not want all the users to be able to perform destructable acti
 
 ##**Conclusion**
 After much delay (about 15 days) I am finally done with the material of this week. The week 4 material is focused on some techniques to make a rails app more sophisticated, such as slug, admin role, and time zone. The final project took me a few days to work on it. Although I ran into a few hurdles, the overall process is very fun. There is no better way to feel accomplished as a programmer other than being able to bring your concept and idea to life with the skills you master.
+
+
+{% include comments.html %}

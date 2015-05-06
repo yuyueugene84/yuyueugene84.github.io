@@ -28,6 +28,8 @@ layout: default
 				{{ content }}
 
                 <hr>
+                <!-- disqus comment threads-->
+                {% include comments.html %}
 
                 <ul class="pager">
                     {% if page.previous.url %}
@@ -45,6 +47,8 @@ layout: default
             </div>
         </div>
     </div>
+
 </article>
 
 <hr>
+
